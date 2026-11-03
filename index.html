@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical Theories in Global Workplaces | Interactive Study Guide</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+        .tab-btn.active {
+            border-color: #2563eb;
+            color: #1d4ed8;
+            background-color: rgba(37, 99, 235, 0.08);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-blue-600 selection:text-white">
+
+    <!-- Top Navigation Header -->
+    <header class="sticky top-0 z-50 glass-card border-b border-slate-200 px-4 lg:px-8 py-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center shadow-md shadow-blue-500/20">
+                    <i class="fa-solid fa-scale-balanced text-xl text-white"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-slate-900 tracking-wide">Global Business Ethics</h1>
+                    <p class="text-xs text-slate-500 font-medium">Leadership & Strategic Decision-Making</p>
+                </div>
+            </div>
+
+            <!-- Page Step Indicator & Progress Tracker -->
+            <div class="flex items-center space-x-4">
+                <div class="hidden sm:flex items-center space-x-2 text-xs font-semibold bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
+                    <span id="page-indicator" class="text-blue-600">Page 1 of 3</span>
+                </div>
+                <div class="flex items-center space-x-2 text-sm bg-slate-100 px-4 py-2 rounded-full border border-slate-200">
+                    <i class="fa-solid fa-trophy text-amber-500"></i>
+                    <span class="text-slate-700 font-medium">Score: <strong id="user-score" class="text-blue-600 font-bold">0</strong> / 4</span>
+                </div>
+                <button onclick="resetProgress()" class="text-xs text-slate-500 hover:text-slate-900 transition flex items-center gap-1 font-medium">
+                    <i class="fa-solid fa-rotate-right"></i> Reset
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Learning Container -->
+    <main class="max-w-7xl mx-auto w-full px-4 lg:px-8 py-8 flex-grow space-y-8">
+
+        <!-- Introduction & Headings Content Outline Banner -->
+        <section class="glass-card rounded-2xl p-6 sm:p-8 relative overflow-hidden bg-gradient-to-br from-white via-blue-50/40 to-indigo-50/30">
+            <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="relative z-10 space-y-6">
+                <div>
+                    <span class="px-3 py-1 text-xs font-bold uppercase tracking-wider bg-blue-100 text-blue-700 border border-blue-200 rounded-full">Strategic Managerial Note</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 leading-tight mt-2">Ethical Theories and Their Relevance to Global Workplace Situations</h2>
+                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base mt-2">
+                        As organisations increasingly operate across countries, cultures, and regulatory environments, ethical theories provide useful frameworks for managers when making decisions involving employees, customers, suppliers, and wider society.
+                    </p>
+                </div>
+
+                <!-- Section Headings List -->
+                <div class="bg-white/80 rounded-xl p-5 border border-slate-200 space-y-3 shadow-sm">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-2">
+                        <i class="fa-solid fa-list-ol text-blue-600"></i> Content List Overview
+                    </h3>
+                    <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-2 text-xs font-semibold text-slate-800">
+                        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center gap-2">
+                            <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-[10px] font-bold">1</span>
+                            <span>Deontology</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center gap-2">
+                            <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-[10px] font-bold">2</span>
+                            <span>Utilitarianism</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center gap-2">
+                            <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-[10px] font-bold">3</span>
+                            <span>Stakeholder Theory</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center gap-2">
+                            <span class="w-5 h-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-[10px] font-bold">4</span>
+                            <span>Discourse Theory</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center gap-2 sm:col-span-2">
+                            <span class="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-[10px] font-bold">5</span>
+                            <span>Theoretical Matrix & Comparative Framework</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center gap-2">
+                            <span class="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-[10px] font-bold">6</span>
+                            <span>Interactive Dilemma Analyzer</span>
+                        </div>
+                        <div class="p-2.5 rounded-lg bg-slate-50 border border-slate-200 flex items-center gap-2">
+                            <span class="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center text-[10px] font-bold">7</span>
+                            <span>Academic & Practitioner Reading Hub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 1: CORE THEORIES & MCQS -->
+        <div id="page-1" class="space-y-8">
+            <!-- Student Instructions Banner for Page 1 -->
+            <div class="bg-blue-50 border border-blue-200 rounded-2xl p-5 flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center flex-shrink-0 text-lg shadow-sm">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+                <div class="space-y-1 text-sm">
+                    <h3 class="font-bold text-blue-900">Page 1 Activity Instructions</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Click through each of the <strong>four theoretical quadrants</strong> below (Deontology, Utilitarianism, Stakeholder Theory, and Discourse Theory). Read the key principles, global workplace applications, and real-world examples for each. Complete the <strong>multiple-choice test question at the bottom of each theory quadrant</strong> to check your understanding. Aim for a score of 4/4 before proceeding to Page 2!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Navigation Tabs for Theoretical Quadrants -->
+            <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2 block">Step 1: Select a Theoretical Quadrant to Study</span>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <button onclick="switchTab('deontology')" id="tab-deontology" class="tab-btn active p-4 rounded-xl border border-slate-200 glass-card text-left transition-all duration-200 flex flex-col justify-between h-24 hover:border-blue-400">
+                        <div class="flex justify-between items-center w-full">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Quadrant 01</span>
+                            <i class="fa-solid fa-shield-halved text-blue-600"></i>
+                        </div>
+                        <span class="font-bold text-sm sm:text-base text-slate-900">Deontology</span>
+                    </button>
+
+                    <button onclick="switchTab('utilitarianism')" id="tab-utilitarianism" class="tab-btn p-4 rounded-xl border border-slate-200 glass-card text-left transition-all duration-200 flex flex-col justify-between h-24 hover:border-blue-400">
+                        <div class="flex justify-between items-center w-full">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Quadrant 02</span>
+                            <i class="fa-solid fa-chart-line text-indigo-600"></i>
+                        </div>
+                        <span class="font-bold text-sm sm:text-base text-slate-900">Utilitarianism</span>
+                    </button>
+
+                    <button onclick="switchTab('stakeholder')" id="tab-stakeholder" class="tab-btn p-4 rounded-xl border border-slate-200 glass-card text-left transition-all duration-200 flex flex-col justify-between h-24 hover:border-blue-400">
+                        <div class="flex justify-between items-center w-full">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Quadrant 03</span>
+                            <i class="fa-solid fa-users text-teal-600"></i>
+                        </div>
+                        <span class="font-bold text-sm sm:text-base text-slate-900">Stakeholder Theory</span>
+                    </button>
+
+                    <button onclick="switchTab('discourse')" id="tab-discourse" class="tab-btn p-4 rounded-xl border border-slate-200 glass-card text-left transition-all duration-200 flex flex-col justify-between h-24 hover:border-blue-400">
+                        <div class="flex justify-between items-center w-full">
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Quadrant 04</span>
+                            <i class="fa-solid fa-comments text-amber-600"></i>
+                        </div>
+                        <span class="font-bold text-sm sm:text-base text-slate-900">Discourse Theory</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dynamic Theory Content Area -->
+            <div id="content-container" class="space-y-8">
+                <!-- Content will be injected dynamically via JS -->
+            </div>
+
+            <!-- Navigation Button to Move to Page 2 -->
+            <div class="flex justify-end pt-4">
+                <button onclick="goToPage(2)" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-lg shadow-blue-500/20 transition flex items-center gap-2">
+                    <span>Move to Matrix & Interactive Dilemma Analyzer (Page 2)</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- PAGE 2: MATRIX & INTERACTIVE DILEMMA ANALYZER -->
+        <div id="page-2" class="space-y-8 hidden">
+            <!-- Navigation Header -->
+            <div class="flex items-center justify-between">
+                <button onclick="goToPage(1)" class="px-4 py-2 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold text-xs transition flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Back to Core Theories (Page 1)</span>
+                </button>
+                <button onclick="goToPage(3)" class="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs transition flex items-center gap-2">
+                    <span>Next: Academic & Practitioner Hub (Page 3)</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <!-- Page 2 Instructions Banner -->
+            <div class="bg-indigo-50 border border-indigo-200 rounded-2xl p-5 flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center flex-shrink-0 text-lg shadow-sm">
+                    <i class="fa-solid fa-compass"></i>
+                </div>
+                <div class="space-y-1 text-sm">
+                    <h3 class="font-bold text-indigo-900">Page 2 Activity Instructions</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Review the <strong>Theoretical Matrix</strong> to compare the core focuses and managerial imperatives across all four frameworks. Next, use the <strong>Interactive Dilemma Analyzer</strong>: click each scenario button (Scenarios A, B, and C) to analyze how managers apply each theoretical perspective when making complex decision in global cross-border operations.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Comprehensive Comparative Synthesis Table -->
+            <section class="glass-card rounded-2xl p-6 sm:p-8 space-y-6">
+                <div class="border-b border-slate-200 pb-4 flex flex-col md:flex-row md:items-center justify-between gap-2">
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900">Theoretical Matrix & Comparative Framework</h3>
+                        <p class="text-slate-500 text-sm">Strategic summary of theories and global workplace applications.</p>
+                    </div>
+                    <span class="text-xs font-semibold bg-slate-100 border border-slate-200 text-slate-600 px-3 py-1 rounded-full w-fit">Comparative Matrix</span>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm text-slate-700">
+                        <thead class="bg-slate-100 uppercase text-xs text-slate-500 font-semibold">
+                            <tr>
+                                <th class="p-4 rounded-tl-lg">Theory</th>
+                                <th class="p-4">Main Focus</th>
+                                <th class="p-4">Global Workplace Application</th>
+                                <th class="p-4 rounded-tr-lg">Managerial Imperative</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 font-normal">
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-bold text-blue-700 flex items-center gap-2">
+                                    <i class="fa-solid fa-shield-halved text-xs"></i> Deontology
+                                </td>
+                                <td class="p-4">Duties, principles, rights</td>
+                                <td class="p-4">Human rights, equality, compliance, anti-discrimination</td>
+                                <td class="p-4 text-xs text-slate-500">Non-negotiable moral duties overriding economic gain.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-bold text-indigo-700 flex items-center gap-2">
+                                    <i class="fa-solid fa-chart-line text-xs"></i> Utilitarianism
+                                </td>
+                                <td class="p-4">Greatest overall benefit</td>
+                                <td class="p-4">Employee wellbeing, sustainability, organisational decisions</td>
+                                <td class="p-4 text-xs text-slate-500">Cost-benefit calculation evaluating collective impact.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-bold text-teal-700 flex items-center gap-2">
+                                    <i class="fa-solid fa-users text-xs"></i> Stakeholder Theory
+                                </td>
+                                <td class="p-4">Responsibilities to all stakeholders</td>
+                                <td class="p-4">ESG, responsible management, global workforce considerations</td>
+                                <td class="p-4 text-xs text-slate-500">Long-term value creation across ecosystems.</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-bold text-amber-700 flex items-center gap-2">
+                                    <i class="fa-solid fa-comments text-xs"></i> Discourse Theory
+                                </td>
+                                <td class="p-4">Fair and inclusive dialogue</td>
+                                <td class="p-4">Employee voice, cultural inclusion, participative leadership</td>
+                                <td class="p-4 text-xs text-slate-500">Communicative rationality & psychological safety.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-xl border border-blue-200 text-xs text-slate-700 leading-relaxed flex items-start gap-3">
+                    <i class="fa-solid fa-lightbulb text-amber-500 text-lg mt-0.5"></i>
+                    <div>
+                        <strong class="text-slate-900 font-semibold">Key Takeaway:</strong>
+                        In global workplaces, these theories are often complementary rather than competing. Effective managers balance principles and rights (<span class="text-blue-700 font-semibold">Deontology</span>), outcomes and consequences (<span class="text-indigo-700 font-semibold">Utilitarianism</span>), stakeholder interests (<span class="text-teal-700 font-semibold">Stakeholder Theory</span>), and inclusive participation and dialogue (<span class="text-amber-700 font-semibold">Discourse Theory</span>). Together, they support ethical leadership in culturally diverse and globally connected organisations.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dynamic Dilemma Evaluator (Interactive Tool) -->
+            <section class="glass-card rounded-2xl p-6 sm:p-8 space-y-6">
+                <div class="border-b border-slate-200 pb-4">
+                    <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-compass text-indigo-600"></i> Interactive Dilemma Analyzer
+                    </h3>
+                    <p class="text-slate-500 text-sm">Select a global managerial dilemma below to see how each ethical theory prescribes distinct managerial actions.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-4">
+                    <button onclick="loadDilemma('supply_chain')" id="btn-supply_chain" class="dilemma-btn p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-left transition">
+                        <span class="text-xs text-blue-600 font-bold block mb-1">Scenario A</span>
+                        <strong class="text-slate-900 text-sm block">Overseas Child Labour in Supply Chains</strong>
+                    </button>
+                    <button onclick="loadDilemma('hybrid_work')" id="btn-hybrid_work" class="dilemma-btn p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-left transition">
+                        <span class="text-xs text-blue-600 font-bold block mb-1">Scenario B</span>
+                        <strong class="text-slate-900 text-sm block">Global Hybrid Working Policy Rollout</strong>
+                    </button>
+                    <button onclick="loadDilemma('relocation')" id="btn-relocation" class="dilemma-btn p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-left transition">
+                        <span class="text-xs text-blue-600 font-bold block mb-1">Scenario C</span>
+                        <strong class="text-slate-900 text-sm block">Factory Relocation to Emerging Market</strong>
+                    </button>
+                </div>
+
+                <div id="dilemma-display" class="p-6 bg-slate-50 rounded-xl border border-slate-200 space-y-4 min-h-[160px]">
+                    <!-- Dilemma comparative analysis injected here -->
+                </div>
+            </section>
+
+            <div class="flex justify-end pt-4">
+                <button onclick="goToPage(3)" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-lg shadow-blue-500/20 transition flex items-center gap-2">
+                    <span>Move to Academic & Practitioner Reading Hub (Page 3)</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- PAGE 3: ACADEMIC & PRACTITIONER READING HUB -->
+        <div id="page-3" class="space-y-8 hidden">
+            <!-- Navigation Back Button -->
+            <div class="flex justify-start">
+                <button onclick="goToPage(2)" class="px-4 py-2 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold text-xs transition flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Back to Matrix & Dilemma Analyzer (Page 2)</span>
+                </button>
+            </div>
+
+            <!-- Page 3 Instructions Banner -->
+            <div class="bg-teal-50 border border-teal-200 rounded-2xl p-5 flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center flex-shrink-0 text-lg shadow-sm">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                </div>
+                <div class="space-y-1 text-sm">
+                    <h3 class="font-bold text-teal-900">Page 3 Activity Instructions</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        Explore these curated <strong>Academic Sources</strong> and <strong>Practitioner Resources</strong> to deepen your critical understanding. Click the repository links to read primary literature on business ethics and international human rights frameworks.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Academic & Practitioner References Section -->
+            <section class="glass-card rounded-2xl p-6 sm:p-8 space-y-6">
+                <h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-book-bookmark text-blue-600"></i> Academic & Practitioner Reading Hub
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Academic Sources -->
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-semibold uppercase tracking-wider text-slate-500 border-b border-slate-200 pb-2">Academic Sources</h4>
+                        <ul class="space-y-3 text-sm">
+                            <li class="bg-slate-50 p-3 rounded-lg border border-slate-200 hover:border-blue-400 transition">
+                                <span class="text-slate-900 font-medium block">Freeman, R. E. and colleagues.</span>
+                                <span class="text-slate-500 text-xs block mb-2">"Three Problems of Business Addressed by Stakeholder Theory: Insights from a Pragmatic Perspective." Journal of Business Ethics, 2024.</span>
+                                <a href="https://link.springer.com/article/10.1007/s10551-024-05854-1" target="_blank" class="inline-flex items-center gap-1 text-xs text-blue-600 hover:underline font-semibold">
+                                    Read Article <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </li>
+                            <li class="bg-slate-50 p-3 rounded-lg border border-slate-200 hover:border-blue-400 transition">
+                                <span class="text-slate-900 font-medium block">Journal of Business Ethics</span>
+                                <span class="text-slate-500 text-xs block mb-2">Springer Nature Articles</span>
+                                <a href="https://link.springer.com/journal/10551/articles" target="_blank" class="inline-flex items-center gap-1 text-xs text-blue-600 hover:underline font-semibold">
+                                    Journal Repository <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </li>
+                            <li class="bg-slate-50 p-3 rounded-lg border border-slate-200 hover:border-blue-400 transition">
+                                <span class="text-slate-900 font-medium block">Business Ethics Quarterly</span>
+                                <span class="text-slate-500 text-xs block mb-2">Cambridge University Press</span>
+                                <a href="https://www.cambridge.org/core/journals/business-ethics-quarterly" target="_blank" class="inline-flex items-center gap-1 text-xs text-blue-600 hover:underline font-semibold">
+                                    Journal Repository <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Practitioner Resources -->
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-semibold uppercase tracking-wider text-slate-500 border-b border-slate-200 pb-2">Practitioner and Business Resources</h4>
+                        <ul class="space-y-3 text-sm">
+                            <li class="bg-slate-50 p-3 rounded-lg border border-slate-200 hover:border-blue-400 transition">
+                                <span class="text-slate-900 font-medium block">Harvard Business Review</span>
+                                <span class="text-slate-500 text-xs block mb-2">Ethics and Leadership Collection</span>
+                                <a href="https://hbr.org/topic/subject/business-ethics" target="_blank" class="inline-flex items-center gap-1 text-xs text-blue-600 hover:underline font-semibold">
+                                    Explore HBR Collection <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </li>
+                            <li class="bg-slate-50 p-3 rounded-lg border border-slate-200 hover:border-blue-400 transition">
+                                <span class="text-slate-900 font-medium block">United Nations Global Compact</span>
+                                <span class="text-slate-500 text-xs block mb-2">Business and Human Rights Guidance</span>
+                                <a href="https://www.unglobalcompact.org/what-is-gc/our-work/social/human-rights" target="_blank" class="inline-flex items-center gap-1 text-xs text-blue-600 hover:underline font-semibold">
+                                    Access UN Guidance <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </li>
+                            <li class="bg-slate-50 p-3 rounded-lg border border-slate-200 hover:border-blue-400 transition">
+                                <span class="text-slate-900 font-medium block">Society for Human Resource Management (SHRM)</span>
+                                <span class="text-slate-500 text-xs block mb-2">Workplace Inclusion and Ethics Resources</span>
+                                <a href="https://www.shrm.org" target="_blank" class="inline-flex items-center gap-1 text-xs text-blue-600 hover:underline font-semibold">
+                                    SHRM Inclusion <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-500 font-medium">
+        <p>Educational Resource &copy; Global Workplace Leadership Series | Interactive Case Study Suite</p>
+    </footer>
+
+    <!-- Interactive Data Script -->
+    <script>
+        // Data Structure for Ethical Theories
+        const data = {
+            deontology: {
+                title: "1. Deontology (Duty-Based Ethics)",
+                badge: "Duty & Principles",
+                icon: "fa-shield-halved",
+                color: "text-blue-600",
+                keyIdea: "An action is ethical if it follows established moral duties, rules, or principles, regardless of the outcome.",
+                applications: [
+                    "Ensuring equal treatment of employees regardless of nationality, gender, religion, or ethnicity.",
+                    "Following anti-discrimination policies even when ignoring them could provide short-term business benefits.",
+                    "Protecting employee privacy and human rights across all countries of operation."
+                ],
+                example: "A multinational company refuses to use suppliers that engage in child labour, even if doing so would reduce costs. The decision is based on moral duty and respect for human rights rather than financial outcomes.",
+                relevance: "Deontology encourages organisations to uphold universal standards of fairness and human dignity across different cultural and legal contexts.",
+                mcq: {
+                    id: "mcq-deontology",
+                    question: "Under Deontology, why would a company refuse to use suppliers employing child labor?",
+                    options: [
+                        { text: "Because it significantly increases long-term profit margins.", correct: false },
+                        { text: "Based on moral duty and respect for fundamental human rights, regardless of financial outcomes.", correct: true },
+                        { text: "Only if local governments impose strict legal penalties.", correct: false },
+                        { text: "To gain a temporary public relations advantage over competitors.", correct: false }
+                    ],
+                    explanation: "Correct! Deontology holds that actions are ethical when they fulfill moral duties and respect human dignity, regardless of financial consequences."
+                }
+            },
+            utilitarianism: {
+                title: "2. Utilitarianism (Consequentialist Ethics)",
+                badge: "Greatest Overall Benefit",
+                icon: "fa-chart-line",
+                color: "text-indigo-600",
+                keyIdea: "The most ethical decision is the one that produces the greatest good for the greatest number of people.",
+                applications: [
+                    "Designing employee wellbeing and flexible working policies that benefit the majority of employees.",
+                    "Making restructuring decisions that aim to preserve the greatest number of jobs.",
+                    "Evaluating sustainability initiatives based on their overall impact on employees, communities, and the environment."
+                ],
+                example: "A company invests in mental health support programmes for all employees globally, believing the benefits to workforce wellbeing and productivity outweigh the implementation costs.",
+                relevance: "Utilitarianism is often applied in multinational decision-making where managers must balance the needs of employees, shareholders, customers, and local communities.",
+                mcq: {
+                    id: "mcq-utilitarianism",
+                    question: "What is the core principle of Utilitarianism when applied to managerial decisions?",
+                    options: [
+                        { text: "Following strict historical labor regulations passed decades ago.", correct: false },
+                        { text: "Making decisions based strictly on executive preferences.", correct: false },
+                        { text: "Selecting the action that produces the greatest good for the greatest number of people.", correct: true },
+                        { text: "Ensuring every single regional office receives identical funding allocation regardless of need.", correct: false }
+                    ],
+                    explanation: "Correct! Utilitarianism focuses on consequences and selecting the outcome that yields the greatest overall benefit for the majority."
+                }
+            },
+            stakeholder: {
+                title: "3. Stakeholder Theory",
+                badge: "Responsibility to All Stakeholders",
+                icon: "fa-users",
+                color: "text-teal-600",
+                keyIdea: "Organisations have responsibilities to all stakeholders, not just shareholders.",
+                stakeholdersList: ["Employees", "Customers", "Suppliers", "Local communities", "Governments", "Investors"],
+                applications: [
+                    "Considering how decisions affect workers in different countries.",
+                    "Engaging employees in decisions impacting workplace culture and inclusion.",
+                    "Addressing environmental and social impacts throughout global supply chains."
+                ],
+                example: "Before relocating operations, a company assesses the impact on employees, local communities, suppliers, and shareholders rather than focusing solely on cost reduction.",
+                relevance: "Stakeholder theory aligns strongly with ESG (Environmental, Social and Governance) practices and the UN Sustainable Development Goals (SDGs). Recent research highlights stakeholder theory as central to value creation, ethical business conduct, and responsible management in modern organisations (Freeman et al., 2024).",
+                mcq: {
+                    id: "mcq-stakeholder",
+                    question: "According to Stakeholder Theory, to whom do organisations owe responsibilities?",
+                    options: [
+                        { text: "Only equity shareholders and institutional investors.", correct: false },
+                        { text: "To all stakeholders, including employees, customers, suppliers, local communities, governments, and investors.", correct: true },
+                        { text: "Exclusively to external government regulatory agencies.", correct: false },
+                        { text: "Solely to the Chief Executive Officer and senior managers.", correct: false }
+                    ],
+                    explanation: "Correct! Stakeholder theory expands organisational responsibilities beyond financial shareholders to all internal and external groups affected by the business."
+                }
+            },
+            discourse: {
+                title: "4. Discourse Theory (Discourse Ethics)",
+                badge: "Dialogue & Participation",
+                icon: "fa-comments",
+                color: "text-amber-600",
+                keyIdea: "Ethical decisions should emerge through open, fair, and inclusive dialogue among affected parties. Derived largely from the work of Jürgen Habermas, discourse ethics emphasises communication, participation, and mutual understanding.",
+                applications: [
+                    "Facilitating inclusive discussions across culturally diverse teams.",
+                    "Involving employees in organisational change processes.",
+                    "Creating psychologically safe environments where different viewpoints can be expressed."
+                ],
+                example: "A global organisation introducing a hybrid working policy gathers input from employees in the UK, Pakistan, Brazil, and Germany before finalising decisions.",
+                relevance: "Discourse ethics is particularly valuable in multicultural workplaces where managers must navigate differing cultural norms, expectations, and communication styles. It supports inclusion, employee voice, and collaborative decision-making.",
+                mcq: {
+                    id: "mcq-discourse",
+                    question: "How does Discourse Theory suggest managers make ethical decisions in multicultural workplaces?",
+                    options: [
+                        { text: "By enforcing home-country policies uniformly without consultation.", correct: false },
+                        { text: "Through open, fair, and inclusive dialogue among affected parties to reach mutual understanding.", correct: true },
+                        { text: "By using financial algorithms to eliminate human discussion.", correct: false },
+                        { text: "By making top-down decisions behind closed doors.", correct: false }
+                    ],
+                    explanation: "Correct! Discourse ethics emphasizes that ethical decisions should emerge through inclusive, fair dialogue and participatory communication."
+                }
+            }
+        };
+
+        // Interactive Dilemma Data
+        const dilemmas = {
+            supply_chain: {
+                title: "Scenario: Overseas Child Labour in Supply Chains",
+                deontology: "Refuse to work with suppliers engaging in child labour based on moral duty and human rights respect.",
+                utilitarianism: "Evaluate actions to ensure the highest positive wellbeing for the overall community and workforce.",
+                stakeholder: "Consider impacts on local families, suppliers, and community sustainability in line with ESG standards.",
+                discourse: "Engage in transparent dialogue with regional suppliers and communities to establish fair standards."
+            },
+            hybrid_work: {
+                title: "Scenario: Global Hybrid Working Policy Rollout",
+                deontology: "Ensure fair and equal treatment of all employees globally without discrimination.",
+                utilitarianism: "Design flexible working policies that benefit the majority of employees and enhance overall workforce wellbeing.",
+                stakeholder: "Engage employees across international branches in shaping workplace culture and inclusion.",
+                discourse: "Gather input from employees across international offices (e.g., UK, Pakistan, Brazil, Germany) before deciding."
+            },
+            relocation: {
+                title: "Scenario: Relocating Operations Across Borders",
+                deontology: "Protect employee rights and uphold anti-discrimination principles throughout the process.",
+                utilitarianism: "Aim to structure restructuring decisions to preserve the greatest number of overall jobs.",
+                stakeholder: "Assess impact on employees, local communities, suppliers, and shareholders before relocating.",
+                discourse: "Conduct participative discussions with affected regional workforces to navigate changes collaboratively."
+            }
+        };
+
+        // User Quiz State
+        let answeredQuizzes = { deontology: false, utilitarianism: false, stakeholder: false, discourse: false };
+        let activeTab = 'deontology';
+
+        // Page Navigation Logic
+        function goToPage(pageNum) {
+            document.getElementById('page-1').classList.add('hidden');
+            document.getElementById('page-2').classList.add('hidden');
+            document.getElementById('page-3').classList.add('hidden');
+
+            document.getElementById(`page-${pageNum}`).classList.remove('hidden');
+            document.getElementById('page-indicator').innerText = `Page ${pageNum} of 3`;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Render Active Theory Content
+        function renderTheory(theoryKey) {
+            const item = data[theoryKey];
+            const container = document.getElementById('content-container');
+
+            let stakeholderSection = '';
+            if (item.stakeholdersList) {
+                stakeholderSection = `
+                    <div class="mt-4">
+                        <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-2">Stakeholders Include:</span>
+                        <div class="flex flex-wrap gap-2">
+                            ${item.stakeholdersList.map(s => `<span class="px-3 py-1 bg-teal-50 text-teal-700 border border-teal-200 rounded-full text-xs font-semibold">${s}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            container.innerHTML = `
+                <div class="glass-card rounded-2xl p-6 sm:p-8 space-y-8">
+                    <!-- Theory Header -->
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-2xl ${item.color}">
+                                <i class="fa-solid ${item.icon}"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold ${item.color} uppercase tracking-wider">${item.badge}</span>
+                                <h2 class="text-2xl font-bold text-slate-900">${item.title}</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Idea & Application -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3">
+                            <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-key text-amber-500"></i> Key Idea
+                            </h3>
+                            <p class="text-slate-700 text-sm leading-relaxed">${item.keyIdea}</p>
+                            ${stakeholderSection}
+                        </div>
+
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3">
+                            <h3 class="text-sm font-semibold text-slate-900 uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-briefcase text-blue-600"></i> Application in Global Workplaces
+                            </h3>
+                            <ul class="space-y-2 text-sm text-slate-700">
+                                ${item.applications.map(app => `
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-check text-emerald-600 text-xs mt-1"></i>
+                                        <span>${app}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Workplace Example -->
+                    <div class="bg-gradient-to-r from-blue-50 via-slate-50 to-blue-50 p-6 rounded-xl border-l-4 border-blue-600 space-y-2">
+                        <h4 class="text-xs uppercase tracking-wider font-bold text-blue-700">Example</h4>
+                        <p class="text-sm text-slate-800 leading-relaxed italic">${item.example}</p>
+                    </div>
+
+                    <!-- Global Relevance -->
+                    <div class="space-y-2">
+                        <h4 class="text-sm font-semibold text-slate-900 uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-solid fa-globe text-indigo-600"></i> Global Relevance
+                        </h4>
+                        <p class="text-slate-700 text-sm leading-relaxed">${item.relevance}</p>
+                    </div>
+
+                    <!-- MCQ Assessment Card -->
+                    <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 space-y-5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-amber-600 uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-circle-question"></i> Understanding Check
+                            </span>
+                            <span class="text-xs text-slate-400 font-medium">MCQ</span>
+                        </div>
+
+                        <p class="text-sm font-semibold text-slate-900">${item.mcq.question}</p>
+
+                        <div class="space-y-3" id="${item.mcq.id}-options">
+                            ${item.mcq.options.map((opt, idx) => `
+                                <button onclick="checkAnswer('${theoryKey}', ${idx}, ${opt.correct})" class="w-full text-left p-3.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 hover:border-slate-300 transition text-xs sm:text-sm text-slate-800 font-medium flex items-start justify-between group shadow-sm">
+                                    <span class="pr-4">${opt.text}</span>
+                                    <i class="fa-regular fa-circle text-slate-400 group-hover:text-blue-600 mt-0.5"></i>
+                                </button>
+                            `).join('')}
+                        </div>
+
+                        <div id="${item.mcq.id}-feedback" class="hidden p-4 rounded-lg text-xs sm:text-sm leading-relaxed font-medium"></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Tab Switching Logic
+        function switchTab(tabKey) {
+            activeTab = tabKey;
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`tab-${tabKey}`).classList.add('active');
+            renderTheory(tabKey);
+        }
+
+        // Check MCQ Answer
+        function checkAnswer(theoryKey, optionIdx, isCorrect) {
+            const mcq = data[theoryKey].mcq;
+            const optionsContainer = document.getElementById(`${mcq.id}-options`);
+            const feedbackContainer = document.getElementById(`${mcq.id}-feedback`);
+
+            // Disable buttons in this quiz
+            const buttons = optionsContainer.querySelectorAll('button');
+            buttons.forEach((btn, idx) => {
+                btn.disabled = true;
+                btn.classList.add('cursor-not-allowed', 'opacity-70');
+                if (idx === optionIdx) {
+                    if (isCorrect) {
+                        btn.classList.remove('border-slate-200', 'bg-white');
+                        btn.classList.add('border-emerald-500', 'bg-emerald-50', 'text-emerald-900');
+                    } else {
+                        btn.classList.remove('border-slate-200', 'bg-white');
+                        btn.classList.add('border-rose-500', 'bg-rose-50', 'text-rose-900');
+                    }
+                }
+            });
+
+            feedbackContainer.classList.remove('hidden');
+            if (isCorrect) {
+                feedbackContainer.className = 'p-4 rounded-lg text-xs sm:text-sm bg-emerald-50 border border-emerald-300 text-emerald-900';
+                feedbackContainer.innerHTML = `<i class="fa-solid fa-circle-check mr-2 text-emerald-600"></i> ${mcq.explanation}`;
+                
+                if (!answeredQuizzes[theoryKey]) {
+                    answeredQuizzes[theoryKey] = true;
+                    updateScore();
+                }
+            } else {
+                feedbackContainer.className = 'p-4 rounded-lg text-xs sm:text-sm bg-rose-50 border border-rose-300 text-rose-900';
+                feedbackContainer.innerHTML = `<i class="fa-solid fa-circle-xmark mr-2 text-rose-600"></i> Incorrect. Review the theoretical concepts above and try again.`;
+            }
+        }
+
+        // Update Global Score
+        function updateScore() {
+            const score = Object.values(answeredQuizzes).filter(Boolean).length;
+            document.getElementById('user-score').innerText = score;
+        }
+
+        // Reset Progress
+        function resetProgress() {
+            answeredQuizzes = { deontology: false, utilitarianism: false, stakeholder: false, discourse: false };
+            updateScore();
+            renderTheory(activeTab);
+        }
+
+        // Load Dynamic Interactive Dilemma
+        function loadDilemma(key) {
+            const item = dilemmas[key];
+            const container = document.getElementById('dilemma-display');
+
+            document.querySelectorAll('.dilemma-btn').forEach(btn => {
+                btn.classList.remove('border-blue-600', 'bg-blue-50/50');
+                btn.classList.add('border-slate-200', 'bg-slate-50');
+            });
+            document.getElementById(`btn-${key}`).classList.remove('border-slate-200', 'bg-slate-50');
+            document.getElementById(`btn-${key}`).classList.add('border-blue-600', 'bg-blue-50/50');
+
+            container.innerHTML = `
+                <h4 class="text-slate-900 font-bold text-base mb-3">${item.title}</h4>
+                <div class="grid sm:grid-cols-2 gap-4 text-xs">
+                    <div class="p-3 bg-white rounded-lg border border-blue-200 shadow-sm">
+                        <strong class="text-blue-700 block mb-1">Deontological Action:</strong>
+                        <p class="text-slate-700 leading-relaxed">${item.deontology}</p>
+                    </div>
+                    <div class="p-3 bg-white rounded-lg border border-indigo-200 shadow-sm">
+                        <strong class="text-indigo-700 block mb-1">Utilitarian Action:</strong>
+                        <p class="text-slate-700 leading-relaxed">${item.utilitarianism}</p>
+                    </div>
+                    <div class="p-3 bg-white rounded-lg border border-teal-200 shadow-sm">
+                        <strong class="text-teal-700 block mb-1">Stakeholder Approach:</strong>
+                        <p class="text-slate-700 leading-relaxed">${item.stakeholder}</p>
+                    </div>
+                    <div class="p-3 bg-white rounded-lg border border-amber-200 shadow-sm">
+                        <strong class="text-amber-700 block mb-1">Discourse Ethics Approach:</strong>
+                        <p class="text-slate-700 leading-relaxed">${item.discourse}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Initialize Default View on Page Load
+        window.onload = function() {
+            renderTheory('deontology');
+            loadDilemma('supply_chain');
+        };
+    </script>
+</body>
+</html>
